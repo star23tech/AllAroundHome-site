@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Around Home Improvement &amp; Landscaping | Roanoke, VA</title>
+<meta name="description" content="All Around Home Improvement &amp; Landscaping LLC, one local Roanoke crew for lawn care, hardscapes, retaining walls, tree removal, siding, windows, doors, gutters, and exterior painting. 4.9 stars, free estimates.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- LocalBusiness structured data. Confirm "Licensed & Insured" with owner before publishing. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "All Around Home Improvement and Landscaping LLC",
+  "image": "images/logo.png",
+  "telephone": "+15405376163",
+  "foundingDate": "2020-10-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3217 Ellington St",
+    "addressLocality": "Roanoke",
+    "addressRegion": "VA",
+    "postalCode": "24014",
+    "addressCountry": "US"
+  },
+  "areaServed": "Roanoke, VA and surrounding areas",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "19"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --brown:#4A3A26;       /* deep earthy brown - dark sections, footer, text */
+    --brown-mid:#6B5638;
+    --green:#54A538;       /* brand leaf green - primary CTA */
+    --green-dk:#3F8128;
+    --slate:#6E92AD;       /* brand slate blue - secondary accent / value band */
+    --slate-dk:#557390;
+    --cream:#F5F1E8;       /* warm paper bg */
+    --tint:#ECE6D7;        /* alt section bg (warm) */
+    --leaf-tint:#E7EFDD;   /* soft green tint */
+    --ink:#241D12;
+    --ink-soft:#564B3C;
+    --card:#FFFFFF;
+    --line:#DED5C2;
+    --shadow:0 1px 2px rgba(74,58,38,.06), 0 10px 30px rgba(74,58,38,.10);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:"Fraunces","Georgia",serif;line-height:1.06;margin:0;letter-spacing:-.005em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-family:"Inter",sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--green-dk);}
+  .eyebrow.on-dark{color:#9FC98C;}
+  .eyebrow.on-slate{color:#E7F0F6;}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:"Inter",sans-serif;font-weight:700;font-size:1rem;padding:14px 24px;border-radius:9px;text-decoration:none;cursor:pointer;border:none;transition:transform .12s ease,background .15s ease,box-shadow .15s ease;line-height:1;}
+  .btn-primary{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(84,165,56,.30);}
+  .btn-primary:hover{background:var(--green-dk);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--brown);border:2px solid var(--brown);padding:12px 22px;}
+  .btn-ghost:hover{background:var(--brown);color:#fff;transform:translateY(-2px);}
+  .btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.5);}
+  .btn-ghost.on-dark:hover{background:#fff;color:var(--brown);}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(245,241,232,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;}
+  .brand img{width:48px;height:48px;border-radius:50%;flex:0 0 48px;}
+  .brand .name{font-family:"Fraunces",serif;font-weight:700;font-size:1.05rem;color:var(--brown);line-height:1.05;letter-spacing:-.01em;}
+  .brand .name small{display:block;font-family:"Inter",sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--green-dk);margin-top:3px;}
+  .nav-right{display:flex;align-items:center;gap:14px;}
+  .reviews-badge{display:flex;align-items:center;gap:7px;font-size:.85rem;font-weight:600;color:var(--ink-soft);}
+  .reviews-badge .stars{color:var(--green);letter-spacing:1px;}
+  .nav-call{font-family:"Inter",sans-serif;font-weight:700;color:var(--brown);text-decoration:none;font-size:1rem;display:flex;align-items:center;gap:7px;}
+  .nav-call svg{width:17px;height:17px;}
+
+  /* hamburger */
+  .hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:6px;border-radius:8px;flex:0 0 40px;}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--brown);border-radius:2px;transition:transform .22s ease,opacity .22s ease;}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* mobile nav menu */
+  .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(245,241,232,.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:18px 22px 24px;flex-direction:column;gap:6px;z-index:49;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-family:"Inter",sans-serif;font-weight:600;font-size:1.05rem;color:var(--brown);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--line);}
+  .mobile-menu a:last-child{border-bottom:none;}
+  .mobile-menu .mm-call{display:flex;align-items:center;gap:9px;color:var(--green-dk);}
+  .mobile-menu .mm-call svg{width:18px;height:18px;flex:0 0 18px;}
+  .mobile-menu .mm-badge{font-size:.85rem;color:var(--ink-soft);padding:8px 0 0;border:none;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:var(--brown);color:#fff;}
+  .hero .petals{position:absolute;right:-140px;top:-80px;width:620px;height:620px;opacity:.10;pointer-events:none;}
+  .hero-inner{position:relative;z-index:2;padding:74px 0 60px;max-width:720px;}
+  .hero-logo{width:96px;height:96px;border-radius:50%;margin-bottom:20px;box-shadow:0 8px 26px rgba(0,0,0,.3);}
+  .hero h1{font-size:clamp(2.4rem,5.6vw,4rem);font-weight:900;color:#fff;}
+  .hero h1 .accent{color:#8FD06F;}
+  .hero .sub{font-size:1.14rem;color:#E4DCCD;margin:20px 0 30px;max-width:560px;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:32px;}
+  .hero-trust span{display:flex;align-items:center;gap:8px;font-size:.92rem;font-weight:600;color:#D8CFBF;}
+  .hero-trust svg{width:18px;height:18px;flex:0 0 18px;color:#8FD06F;}
+  .stats{display:flex;flex-wrap:wrap;gap:32px 54px;margin-top:44px;padding-top:30px;border-top:1px solid rgba(255,255,255,.16);}
+  .stat .num{font-family:"Fraunces",serif;font-weight:900;font-size:2.5rem;color:#fff;line-height:1;}
+  .stat .num .star{color:var(--green);font-size:1.7rem;}
+  .stat .lbl{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#B3A892;margin-top:8px;font-weight:600;}
+
+  /* value band (slate) */
+  .band{background:var(--slate);color:#fff;}
+  .band-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;padding:30px 0;}
+  .band .lead{display:flex;align-items:center;gap:18px;}
+  .band .ic{width:46px;height:46px;flex:0 0 46px;color:#fff;}
+  .band h2{font-family:"Fraunces",serif;font-size:1.7rem;font-weight:700;color:#fff;}
+  .band p{margin:4px 0 0;color:#EAF1F6;font-weight:500;}
+  .btn-onslate{background:#fff;color:var(--slate-dk);box-shadow:0 6px 18px rgba(0,0,0,.16);font-size:1.05rem;padding:15px 26px;}
+  .btn-onslate:hover{background:var(--brown);color:#fff;transform:translateY(-2px);}
+
+  /* sections */
+  section{padding:78px 0;}
+  .sec-head{max-width:680px;margin-bottom:40px;}
+  .sec-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:var(--brown);margin:12px 0 0;}
+  .sec-head p{color:var(--ink-soft);font-size:1.06rem;margin:16px 0 0;}
+  .alt{background:var(--tint);}
+
+  /* service groups */
+  .svc-group{margin-bottom:46px;}
+  .svc-group:last-child{margin-bottom:0;}
+  .group-label{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+  .group-label .tag{font-family:"Fraunces",serif;font-weight:700;font-size:1.5rem;color:var(--brown);}
+  .group-label .rule{flex:1;height:1px;background:var(--line);}
+  .group-label .pill{font-family:"Inter",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;}
+  .pill.out{background:var(--leaf-tint);color:var(--green-dk);}
+  .pill.in{background:#E7EDF3;color:var(--slate-dk);}
+  .grid{display:grid;gap:18px;}
+  .svc-grid{grid-template-columns:repeat(3,1fr);}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .14s ease,box-shadow .14s ease;}
+  .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .svc .ic{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+  .svc .ic svg{width:23px;height:23px;}
+  .ic.out{background:var(--leaf-tint);color:var(--green-dk);}
+  .ic.in{background:#E7EDF3;color:var(--slate-dk);}
+  .svc h3{font-size:1.16rem;font-weight:700;color:var(--brown);margin-bottom:7px;}
+  .svc p{color:var(--ink-soft);font-size:.95rem;margin:0;}
+
+  /* why */
+  .why-grid{grid-template-columns:repeat(4,1fr);}
+  .why .ic{width:48px;height:48px;border-radius:12px;background:var(--brown);display:flex;align-items:center;justify-content:center;color:#8FD06F;margin-bottom:15px;}
+  .why .ic svg{width:25px;height:25px;}
+  .why h3{font-size:1.08rem;font-weight:700;color:var(--brown);margin-bottom:7px;}
+  .why p{color:var(--ink-soft);font-size:.94rem;margin:0;}
+
+  /* gallery */
+  .gallery-grid{grid-template-columns:repeat(3,1fr);}
+  .tile{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--leaf-tint);}
+  .tile img{width:100%;height:100%;object-fit:cover;}
+  .tile .ph{position:absolute;inset:0;border:2px dashed var(--green);border-radius:12px;background:repeating-linear-gradient(45deg,#EAF1E2,#EAF1E2 14px,#E1EBD6 14px,#E1EBD6 28px);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--green-dk);text-align:center;padding:14px;}
+  .tile .ph svg{width:30px;height:30px;margin-bottom:8px;opacity:.85;}
+  .tile .ph span{font-weight:600;font-size:.9rem;}
+  .tile .ph small{color:var(--ink-soft);font-size:.78rem;margin-top:3px;}
+
+  /* reviews */
+  .reviews-grid{grid-template-columns:repeat(3,1fr);}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;}
+  .review .stars{color:#F5A623;letter-spacing:2px;font-size:1.05rem;margin-bottom:12px;}
+  .review p{color:var(--ink-soft);margin:0 0 16px;flex:1;}
+  .review .who{font-weight:700;color:var(--brown);font-size:.92rem;}
+  .review .src{font-size:.8rem;color:var(--ink-soft);}
+  .reviews-cta{text-align:center;margin-top:34px;}
+
+  /* contact */
+  .contact{background:var(--brown);color:#fff;}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start;}
+  .contact h2{font-family:"Fraunces",serif;font-size:clamp(2rem,4vw,2.7rem);font-weight:900;color:#fff;}
+  .contact .big-call{display:inline-flex;align-items:center;gap:12px;font-family:"Fraunces",serif;font-weight:900;font-size:1.95rem;color:#8FD06F;text-decoration:none;margin:22px 0;}
+  .contact .big-call svg{width:28px;height:28px;}
+  .contact ul{list-style:none;padding:0;margin:18px 0 0;color:#E4DCCD;}
+  .contact ul li{display:flex;gap:11px;padding:6px 0;align-items:flex-start;}
+  .contact ul li svg{width:19px;height:19px;flex:0 0 19px;color:#8FD06F;margin-top:3px;}
+  .form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:26px;}
+  .form label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#9FC98C;margin:0 0 6px;}
+  .form input,.form textarea{width:100%;padding:12px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.96);color:var(--ink);font-family:inherit;font-size:1rem;margin-bottom:16px;}
+  .form textarea{resize:vertical;min-height:84px;}
+  .form .btn-primary{width:100%;justify-content:center;}
+  .form .note{font-size:.8rem;color:#B3A892;margin:12px 0 0;text-align:center;}
+
+  /* footer */
+  footer{background:#352915;color:#BCAE96;padding:54px 0 120px;font-size:.92rem;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  footer h4{font-family:"Inter",sans-serif;color:#fff;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;}
+  footer ul{list-style:none;padding:0;margin:0;}
+  footer ul li{padding:4px 0;}
+  footer a{text-decoration:none;}
+  footer a:hover{color:#fff;}
+  .foot-brand .fb{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+  .foot-brand img{width:46px;height:46px;border-radius:50%;}
+  .foot-brand .name{font-family:"Fraunces",serif;font-weight:700;color:#fff;font-size:1.12rem;line-height:1.1;}
+  .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:22px;font-size:.82rem;color:#8A7C64;}
+
+  /* mobile sticky call bar */
+  .call-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;background:var(--green);box-shadow:0 -4px 18px rgba(0,0,0,.18);}
+  .call-bar a{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;color:#fff;text-decoration:none;font-family:"Inter",sans-serif;font-weight:800;font-size:1.1rem;}
+  .call-bar svg{width:20px;height:20px;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:920px){
+    .svc-grid,.gallery-grid,.reviews-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .contact-grid{grid-template-columns:1fr;gap:34px;}
+  }
+  @media(max-width:680px){
+    body{font-size:16px;}
+    .reviews-badge,.nav-call{display:none;}
+    .hamburger{display:flex;}
+    .nav{height:66px;}
+    .brand .name{font-size:.95rem;}
+    .hero-inner{padding:52px 0 46px;}
+    .hero .petals{width:420px;height:420px;right:-150px;}
+    .stats{gap:24px 36px;}
+    .stat .num{font-size:2rem;}
+    section{padding:56px 0;}
+    .svc-grid,.gallery-grid,.reviews-grid,.why-grid{grid-template-columns:1fr;}
+    .band-inner{flex-direction:column;align-items:flex-start;}
+    .call-bar{display:block;}
+    footer{padding-bottom:96px;}
+    .foot-grid{grid-template-columns:1fr;gap:30px;}
+  }
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+  :focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:4px;}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="All Around Home Improvement and Landscaping home">
+      <img src="images/logo.png" alt="All Around Home Improvement and Landscaping logo">
+      <span class="name">All Around<small>Home Improvement &amp; Landscaping</small></span>
+    </a>
+    <div class="nav-right">
+      <span class="reviews-badge"><span class="stars">★★★★★</span> 4.9 · 60+ Reviews</span>
+      <a class="nav-call" href="tel:+15405376163">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="lbl">(540) 537-6163</span>
+      </a>
+      <a class="btn btn-primary" href="#contact">Free Estimate</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#gallery">Our Work</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Free Estimate</a>
+    <a class="mm-call" href="tel:+15405376163">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (540) 537-6163
+    </a>
+    <span class="mm-badge"><span style="color:var(--green)">★★★★★</span> 4.9 · 60+ Reviews</span>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<a id="top"></a>
+<div class="hero">
+  <svg class="petals" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <g fill="#8FD06F">
+      <path d="M100 100C100 60 80 20 100 12c20 8 0 48 0 88z"/>
+      <path d="M100 100c40 0 80-20 88 0-8 20-48 0-88 0z"/>
+      <path d="M100 100c0 40 20 80 0 88-20-8 0-48 0-88z"/>
+      <path d="M100 100c-40 0-80 20-88 0 8-20 48 0 88 0z"/>
+    </g>
+  </svg>
+  <div class="wrap hero-inner">
+    <img class="hero-logo" src="images/logo.png" alt="All Around Home Improvement and Landscaping logo">
+    <span class="eyebrow on-dark">Family-run · Serving Roanoke since 2020</span>
+    <h1 style="margin-top:14px">One local crew for your <span class="accent">whole property</span></h1>
+    <p class="sub">From mowing and hardscapes to siding, gutters, and exterior painting. All Around Home Improvement &amp; Landscaping handles it all, inside the property line and out, across Roanoke and the surrounding area.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#contact">Get a Free Estimate</a>
+      <a class="btn btn-ghost on-dark" href="tel:+15405376163">Call (540) 537-6163</a>
+    </div>
+    <div class="hero-trust">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg> 4.9★ across 60+ reviews</span>
+      <!-- CONFIRM "Licensed & Insured" with owner before publishing -->
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free, no-pressure estimates</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num"><span data-count="5">0</span></div><div class="lbl">Years in Business</div></div>
+      <div class="stat"><div class="num"><span data-count="4.9" data-dec="1">0</span><span class="star">★</span></div><div class="lbl">Average Rating</div></div>
+      <div class="stat"><div class="num"><span data-count="60">0</span>+</div><div class="lbl">Reviews Across Sites</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ VALUE BAND ============ -->
+<div class="band">
+  <div class="wrap band-inner">
+    <div class="lead">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-5h6v5"/><path d="M9 10h6"/></svg>
+      <div>
+        <h2>One call does it all.</h2>
+        <p>Stop juggling three contractors. We mow, build, plant, paint, and repair. One crew you can trust with the whole list.</p>
+      </div>
+    </div>
+    <a class="btn btn-onslate" href="#services">See everything we do</a>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>One crew you can count on, inside and out</h2>
+      <p>Build a relationship with a team that knows your property, not a different contractor for every job.</p>
+    </div>
+
+    <!-- Group: Outdoor / Landscaping -->
+    <div class="svc-group reveal">
+      <div class="group-label">
+        <span class="pill out">Outside</span>
+        <span class="tag">Landscaping &amp; Outdoor</span>
+        <span class="rule"></span>
+      </div>
+      <div class="grid svc-grid">
+        <div class="svc">
+          <div class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19c4-1 6-4 8-9 2 5 4 8 8 9M12 10V3"/></svg></div>
+          <h3>Lawn Care &amp; Mowing</h3>
+          <p>Reliable every-other-week mowing and full-season maintenance that keeps your yard sharp without you lifting a finger.</p>
+        </div>
+        <div class="svc">
+          <div class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8M12 8c0-3 2-5 5-5-1 4-2 5-5 5zM12 12c0-3-2-5-5-5 1 4 2 5 5 5z"/></svg></div>
+          <h3>Landscaping &amp; Yard Design</h3>
+          <p>Planting, beds, grading, and cleanups that transform how your property looks and how proud you are to come home.</p>
+        </div>
+        <div class="svc">
+          <div class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="18" height="9" rx="1"/><path d="M3 12l3-4h12l3 4M8 12v9M16 12v9"/></svg></div>
+          <h3>Hardscapes, Patios &amp; Fire Pits</h3>
+          <p>Paver patios, walkways, and fire-pit areas built exactly to plan. Outdoor living spaces you'll actually use.</p>
+        </div>
+        <div class="svc">
+          <div class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="6" height="4"/><rect x="11" y="6" width="6" height="4"/><rect x="7" y="11" width="6" height="4"/><rect x="15" y="11" width="6" height="4"/><rect x="3" y="16" width="6" height="4"/><rect x="11" y="16" width="6" height="4"/></svg></div>
+          <h3>Retaining Walls</h3>
+          <p>Smaller retaining walls that control slopes and erosion while adding clean, finished structure to your landscape.</p>
+        </div>
+        <div class="svc">
+          <div class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M12 21V9M12 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8 13l4-4 4 4"/></svg></div>
+          <h3>Tree &amp; Stump Removal</h3>
+          <p>Taking down problem trees and grinding out stumps to clear your yard and protect your home.</p>
+        </div>
+        <div class="svc">
+          <div class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></div>
+          <h3>Snow Removal &amp; Lighting</h3>
+          <p>Seasonal snow clearing plus exterior and holiday lighting installation to keep your property safe and bright.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group: Home Improvement -->
+    <div class="svc-group reveal">
+      <div class="group-label">
+        <span class="pill in">Structure</span>
+        <span class="tag">Home Improvement</span>
+        <span class="rule"></span>
+      </div>
+      <div class="grid svc-grid">
+        <div class="svc">
+          <div class="ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/><path d="M3 12h18"/></svg></div>
+          <h3>Siding, Windows &amp; Doors</h3>
+          <p>New siding, windows, and doors (including storm doors) installed cleanly to refresh and seal up your home.</p>
+        </div>
+        <div class="svc">
+          <div class="ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l3 12h12l3-12M3 7l2-3h14l2 3M3 7h18"/></svg></div>
+          <h3>Gutters &amp; Metal Trim</h3>
+          <p>Gutter installation and metal trim work that protects your roofline and finishes the exterior properly.</p>
+        </div>
+        <div class="svc">
+          <div class="ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h6l11-11-6-6L3 15v6z"/><path d="M14 4l6 6"/></svg></div>
+          <h3>Exterior Painting</h3>
+          <p>Exterior painting that brings tired siding and trim back to life and boosts your home's curb appeal.</p>
+        </div>
+        <div class="svc">
+          <div class="ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M7 21V11M7 11l5-7 5 7M7 11h10"/><path d="M12 11v10"/></svg></div>
+          <h3>Pressure Washing</h3>
+          <p>Pressure washing for siding, drives, and walkways. A fast, high-impact refresh that makes everything look new.</p>
+        </div>
+        <div class="svc">
+          <div class="ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7l3 3-9 9H5v-3z"/><path d="M14 7l2-2a2 2 0 0 1 3 3l-2 2"/><path d="M3 21h18"/></svg></div>
+          <h3>Repairs &amp; Replacements</h3>
+          <p>The whole punch list: trim, doors, fixtures, and the odd jobs other contractors won't bother coming out for.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why neighbors choose us</span>
+      <h2>What Roanoke neighbors are saying</h2>
+      <p>Responsive. Professional. Fair pricing. Work that beats expectations. These aren't our words — they're straight from our customers.</p>
+    </div>
+    <div class="grid why-grid">
+      <div class="why reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Great Communication</h3>
+        <p>Responsive from the first call to the final walkthrough. You're never left wondering what's happening.</p>
+      </div>
+      <div class="why reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>On Time and On Schedule</h3>
+        <p>Punctual and dependable. When we say we'll be there, we're there, and the job gets done on schedule.</p>
+      </div>
+      <div class="why reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div>
+        <h3>Fair, Honest Pricing</h3>
+        <p>Reasonable quotes with no surprises, a value customers mention again and again across every review site.</p>
+      </div>
+      <div class="why reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-5h6v5"/></svg></div>
+        <h3>Local &amp; Family Run</h3>
+        <p>One Roanoke crew for the whole property, inside and out, so you build a relationship, not a contact list.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Recent work</span>
+      <h2>See the All Around difference</h2>
+      <p>A sample of recent projects across Roanoke and the surrounding area.</p>
+    </div>
+    <div class="grid gallery-grid reveal">
+      <div class="tile"><img src="images/project-1.jpg" alt="Landscaping project in Roanoke" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="ph" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>project-1.jpg</span><small>Landscaping / yard</small></div></div>
+      <div class="tile"><img src="images/project-2.jpg" alt="Hardscape patio and fire pit in Roanoke" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="ph" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>project-2.jpg</span><small>Hardscape / fire pit</small></div></div>
+      <div class="tile"><img src="images/project-3.jpg" alt="Exterior home improvement in Roanoke" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="ph" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>project-3.jpg</span><small>Siding / exterior</small></div></div>
+      <div class="tile"><img src="images/project-4.jpg" alt="Retaining wall project in Roanoke" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="ph" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>project-4.jpg</span><small>Retaining wall</small></div></div>
+      <div class="tile"><img src="images/project-5.jpg" alt="Lawn care and mowing in Roanoke" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="ph" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>project-5.jpg</span><small>Lawn / maintenance</small></div></div>
+      <div class="tile"><img src="images/project-6.jpg" alt="Exterior painting and pressure washing in Roanoke" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="ph" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>project-6.jpg</span><small>Painting / washing</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Straight from the neighbors</span>
+      <h2>4.9 stars across 60+ reviews</h2>
+      <p>Google, <a href="https://www.angi.com/companylist/us/va/roanoke/all-around-home-improvement-and-landscaping-reviews-10107094.htm#photos" target="_blank" rel="noopener">Angi</a>, <a href="https://www.homeadvisor.com/rated.AllaroundHomeImprovment.111311587.html" target="_blank" rel="noopener">HomeAdvisor</a>, and <a href="https://www.yelp.com/biz/all-around-home-improvement-and-landscaping-roanoke" target="_blank" rel="noopener">Yelp</a>. The reviews are consistent everywhere people look.</p>
+    </div>
+    <div class="grid reviews-grid reveal">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"So glad to have found All Around! They've been coming regularly to mow and take care of my yard for almost a year now. I love how reliable, fast, and friendly Colby is. Good pricing for the service and it's just so nice to know I've got someone taking care of yard stuff every other week. Highly recommend!"</p>
+        <div class="who">Catherine A.</div><div class="src">Google review</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"If I could give ten stars that's where I would start! They did an awesome job at my home. Very professional, prompt, and reasonable pricing. They showed up when scheduled, worked tirelessly to accomplish what I requested and now it all looks amazing. Highly recommend this company."</p>
+        <div class="who">Leslie H.</div><div class="src">Google review</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Colby and his staff were top notch. I had so many jobs for them to do and they did them all in a timely fashion and way past my expectations. Landscaping, new shutters installed, pressure washing and storm door replacement. More jobs to come. Highly recommend them."</p>
+        <div class="who">Kim S.</div><div class="src">Google review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow on-dark">Free estimates</span>
+      <h2>Let's tackle your list</h2>
+      <p style="color:#E4DCCD;margin-top:16px;max-width:430px">Lawn, hardscape, siding, painting. Whatever's on the list, tell us about it or just call. We'll take a look and give you a straight, no-pressure quote.</p>
+      <a class="big-call" href="tel:+15405376163">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (540) 537-6163
+      </a>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Serving Roanoke &amp; surrounding areas</li>
+      </ul>
+    </div>
+    <div class="form reveal">
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your name">
+      <label for="phone">Phone</label>
+      <input id="phone" type="tel" placeholder="(540) 000-0000">
+      <label for="msg">What do you need done?</label>
+      <textarea id="msg" placeholder="e.g. Mowing every two weeks + a paver patio quote"></textarea>
+      <!-- No backend on a static host. This opens the visitor's email app. Replace with Colby's real inbox. -->
+      <button class="btn btn-primary" type="button" onclick="sendEstimate()">Request My Free Estimate</button>
+      <p class="note">Prefer to talk? Call <a href="tel:+15405376163" style="color:#8FD06F;font-weight:700">(540) 537-6163</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <div class="fb"><img src="images/logo.png" alt="All Around logo"><span class="name">All Around<br>Home Improvement &amp; Landscaping</span></div>
+      <p style="margin:6px 0 0;max-width:320px">One trusted local crew for lawn care, hardscapes, tree work, siding, gutters, painting, and repairs across Roanoke, VA and surrounding areas.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Lawn Care &amp; Mowing</a></li>
+        <li><a href="#services">Landscaping &amp; Hardscapes</a></li>
+        <li><a href="#services">Tree &amp; Stump Removal</a></li>
+        <li><a href="#services">Siding, Windows &amp; Doors</a></li>
+        <li><a href="#services">Gutters &amp; Painting</a></li>
+        <li><a href="#services">Repairs &amp; Pressure Washing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+15405376163">(540) 537-6163</a></li>
+        <li>3217 Ellington St<br>Roanoke, VA 24014</li>
+        <li><a href="https://www.facebook.com/AllaroundHL/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.angi.com/companylist/us/va/roanoke/all-around-home-improvement-and-landscaping-reviews-10107094.htm#photos" target="_blank" rel="noopener">Angi</a></li>
+        <li><a href="https://www.homeadvisor.com/rated.AllaroundHomeImprovment.111311587.html" target="_blank" rel="noopener">HomeAdvisor</a></li>
+        <li><a href="https://www.yelp.com/biz/all-around-home-improvement-and-landscaping-roanoke" target="_blank" rel="noopener">Yelp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">© <span id="yr"></span> All Around Home Improvement and Landscaping LLC · Roanoke, VA · Licensed &amp; Insured <!-- CONFIRM -->. All rights reserved.</div>
+</footer>
+
+<div class="call-bar">
+  <a href="tel:+15405376163">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call (540) 537-6163
+  </a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function toggleMenu(btn) {
+    var menu = document.getElementById('mobileMenu');
+    var open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+  }
+
+  document.querySelectorAll('#mobileMenu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var menu = document.getElementById('mobileMenu');
+      var btn = document.querySelector('.hamburger');
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  function sendEstimate(){
+    var n=document.getElementById('name').value||'';
+    var p=document.getElementById('phone').value||'';
+    var m=document.getElementById('msg').value||'';
+    var to='owner@example.com'; // <-- replace with Colby's real email
+    var subject=encodeURIComponent('Free estimate request from '+(n||'website'));
+    var body=encodeURIComponent('Name: '+n+'\nPhone: '+p+'\n\nNeeds:\n'+m);
+    window.location.href='mailto:'+to+'?subject='+subject+'&body='+body;
+  }
+
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var start=null,dur=1100;
+    function step(ts){
+      if(!start) start=ts;
+      var prog=Math.min((ts-start)/dur,1);
+      var val=target*(0.5-Math.cos(prog*Math.PI)/2);
+      el.textContent = dec? val.toFixed(dec) : Math.round(val);
+      if(prog<1) requestAnimationFrame(step); else el.textContent = dec? target.toFixed(dec): target;
+    }
+    requestAnimationFrame(step);
+  }
+  var statIO=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ animateCount(e.target); statIO.unobserve(e.target);} });
+  },{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var d=parseInt(el.getAttribute('data-dec')||'0',10);
+      el.textContent=parseFloat(el.getAttribute('data-count')).toFixed(d);
+    } else statIO.observe(el);
+  });
+</script>
+</body>
+</html>
