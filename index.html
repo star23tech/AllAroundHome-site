@@ -646,6 +646,8 @@
       headers:{'Accept':'application/json'}
     }).then(function(r){
       if(r.ok){
+        // Track a successful estimate request as a GA4 lead conversion.
+        if(typeof gtag==='function'){ gtag('event','generate_lead',{form_name:'free_estimate'}); }
         form.innerHTML='<div style="text-align:center;padding:24px 0">'+
           '<div style="font-family:\'Fraunces\',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:10px">Thanks — we got it!</div>'+
           '<p style="color:#D8CFBF;margin:0">We\'ll be in touch shortly. Need us sooner? Call '+
