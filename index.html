@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-47WBF0ZFZ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-47WBF0ZFZ8');
+</script>
+
 <title>All Around Home Improvement &amp; Landscaping | Roanoke, VA</title>
 <meta name="description" content="All Around Home Improvement &amp; Landscaping LLC, one local Roanoke crew for lawn care, hardscapes, retaining walls, tree removal, siding, windows, doors, gutters, and exterior painting. 4.9 stars, free estimates.">
 <link rel="canonical" href="https://allaroundroanoke.com/">
@@ -635,6 +646,8 @@
       headers:{'Accept':'application/json'}
     }).then(function(r){
       if(r.ok){
+        // Track a successful estimate request as a GA4 lead conversion.
+        if(typeof gtag==='function'){ gtag('event','generate_lead',{form_name:'free_estimate'}); }
         form.innerHTML='<div style="text-align:center;padding:24px 0">'+
           '<div style="font-family:\'Fraunces\',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:10px">Thanks — we got it!</div>'+
           '<p style="color:#D8CFBF;margin:0">We\'ll be in touch shortly. Need us sooner? Call '+
