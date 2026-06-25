@@ -85,6 +85,7 @@
   h1,h2,h3,.display{font-family:"Fraunces","Georgia",serif;line-height:1.06;margin:0;letter-spacing:-.005em;}
   a{color:inherit;}
   img{max-width:100%;display:block;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
   .eyebrow{font-family:"Inter",sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--green-dk);}
   .eyebrow.on-dark{color:#9FC98C;}
@@ -330,9 +331,18 @@
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free, no-pressure estimates</span>
     </div>
     <div class="stats">
-      <div class="stat"><div class="num"><span data-count="5">0</span></div><div class="lbl">Years in Business</div></div>
-      <div class="stat"><div class="num"><span data-count="4.9" data-dec="1">0</span><span class="star">★</span></div><div class="lbl">Average Rating</div></div>
-      <div class="stat"><div class="num"><span data-count="60">0</span>+</div><div class="lbl">Reviews Across Sites</div></div>
+      <div class="stat">
+        <div class="num"><span class="count" data-count="5" data-dec="0" aria-hidden="true">5</span><span aria-hidden="true">+</span><span class="sr-only">5+ years in business</span></div>
+        <div class="lbl">Years in Business</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="count" data-count="4.9" data-dec="1" aria-hidden="true">4.9</span><span class="star" aria-hidden="true">★</span><span class="sr-only">4.9 star average rating</span></div>
+        <div class="lbl">Average Rating</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="count" data-count="60" data-dec="0" aria-hidden="true">60</span><span aria-hidden="true">+</span><span class="sr-only">60+ reviews across sites</span></div>
+        <div class="lbl">Reviews Across Sites</div>
+      </div>
     </div>
   </div>
 </div>
@@ -647,6 +657,10 @@
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
+  // The real values are server-rendered in the HTML (and exposed to screen
+  // readers via the .sr-only label). This only animates the visual digits in
+  // the aria-hidden .count span from 0 up to the value already in the markup,
+  // so it's a pure visual enhancement and never the source of the content.
   function animateCount(el){
     var target=parseFloat(el.getAttribute('data-count'));
     var dec=parseInt(el.getAttribute('data-dec')||'0',10);
@@ -655,20 +669,19 @@
       if(!start) start=ts;
       var prog=Math.min((ts-start)/dur,1);
       var val=target*(0.5-Math.cos(prog*Math.PI)/2);
-      el.textContent = dec? val.toFixed(dec) : Math.round(val);
-      if(prog<1) requestAnimationFrame(step); else el.textContent = dec? target.toFixed(dec): target;
+      // toFixed(dec) keeps decimals exact, so 4.9 animates as 4.9 and is never rounded to 5.
+      el.textContent = val.toFixed(dec);
+      if(prog<1) requestAnimationFrame(step); else el.textContent = target.toFixed(dec);
     }
     requestAnimationFrame(step);
   }
   var statIO=new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ animateCount(e.target); statIO.unobserve(e.target);} });
   },{threshold:.5});
-  document.querySelectorAll('[data-count]').forEach(function(el){
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      var d=parseInt(el.getAttribute('data-dec')||'0',10);
-      el.textContent=parseFloat(el.getAttribute('data-count')).toFixed(d);
-    } else statIO.observe(el);
-  });
+  // Under reduced motion we do nothing — the correct values are already rendered.
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.stats .count').forEach(function(el){ statIO.observe(el); });
+  }
 </script>
 </body>
 </html>
